@@ -27,20 +27,94 @@ namespace TextBasedRPG_MasonSeale
         static void Main(string[] args)
         {
             display();
-            Console.ReadKey();
+            Console.ReadKey(true);
+            display(1);
+            Console.ReadKey(true);
+            display("");
+            Console.ReadKey(true);
         }
         static void display()
         {
+            Console.Write("+------------------------------+");
             for(int i = 0; i < map.GetLength(0); i++)
             {
                 Console.WriteLine();
+                Console.Write("|");
                 for (int j = 0; j < map.GetLength(1); j++)
                 {
                     Console.Write(map[i, j]);
                 }
+                Console.Write("|");
+
             }
+            Console.WriteLine();
+            Console.WriteLine("+------------------------------+");
         }
-        
+        static void display(int x)
+        {
+            Console.Write("+------------------------------------------------------------+");
+            for (int i = 0; i < map.GetLength(0); i++)
+            {
+                Console.WriteLine();
+                Console.Write("|");
+                for (int j = 0; j < map.GetLength(1); j++)
+                {
+                    Console.Write(map[i, j]);
+                    Console.Write(map[i, j]);
+                }
+                Console.Write("|");
+                Console.WriteLine();
+                Console.Write("|");
+
+                for (int j = 0; j < map.GetLength(1); j++)
+                {
+                    Console.Write(map[i, j]);
+                    Console.Write(map[i, j]);
+                }
+                Console.Write("|");
+
+            }
+            Console.WriteLine();
+            Console.WriteLine("+------------------------------------------------------------+");
+
+        }
+        static void display(string x)
+        {
+            Console.Write("+------------------------------------------------------------------------------------------+");
+            for (int i = 0; i < map.GetLength(0); i++)
+            {
+                Console.WriteLine();
+                Console.Write("|");
+                for (int j = 0; j < map.GetLength(1); j++)
+                {
+                    Console.Write(map[i, j]);
+                    Console.Write(map[i, j]);
+                    Console.Write(map[i, j]);
+                }
+                Console.Write("|");
+                Console.WriteLine();
+                Console.Write("|");
+                for (int j = 0; j < map.GetLength(1); j++)
+                {
+                    Console.Write(map[i, j]);
+                    Console.Write(map[i, j]);
+                    Console.Write(map[i, j]);
+                }
+                Console.Write("|");
+                Console.WriteLine();
+                Console.Write("|");
+                for (int j = 0; j < map.GetLength(1); j++)
+                {
+                    Console.Write(map[i, j]);
+                    Console.Write(map[i, j]);
+                    Console.Write(map[i, j]);
+                }
+                Console.Write("|");
+            }
+            Console.WriteLine();
+            Console.Write("+------------------------------------------------------------------------------------------+");
+
+        }
     }
 
 
