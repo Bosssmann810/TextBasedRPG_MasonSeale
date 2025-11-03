@@ -49,6 +49,7 @@ namespace TextBasedRPG_MasonSeale
                     {
                         Console.Write(map[i, j]);
                     }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.Write("|");
 
                 }
@@ -128,6 +129,7 @@ namespace TextBasedRPG_MasonSeale
             Console.WriteLine("' = grass");
             Console.WriteLine("~ = water");
             Console.WriteLine("^ = mountain");
+            Console.WriteLine("* = forest");
         }
     }
 
