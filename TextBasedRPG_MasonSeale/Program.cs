@@ -28,22 +28,22 @@ namespace TextBasedRPG_MasonSeale
         {
             Console.WriteLine();
             legend();
-            display();
+            DisplayMap();
             Console.ReadKey(true);
             Console.Clear();
             Console.WriteLine("\x1b[3J");
             legend();
-            display(2);
+            DisplayMap(2);
             Console.ReadKey(true);
             Console.Clear();
             Console.WriteLine("\x1b[3J");
             legend();
-            display(3);
+            DisplayMap(3);
             Console.ReadKey(true);
         }
 
        
-        static void display(int x = 1)
+        static void DisplayMap(int x = 1)
         {
             if (x == 1)
             {
