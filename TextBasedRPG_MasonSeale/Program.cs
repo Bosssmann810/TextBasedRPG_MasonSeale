@@ -31,10 +31,12 @@ namespace TextBasedRPG_MasonSeale
             display();
             Console.ReadKey(true);
             Console.Clear();
+            Console.WriteLine("\x1b[3J");
             legend();
             display(2);
             Console.ReadKey(true);
             Console.Clear();
+            Console.WriteLine("\x1b[3J");
             legend();
             display(3);
             Console.ReadKey(true);
@@ -45,8 +47,9 @@ namespace TextBasedRPG_MasonSeale
         {
             if (x == 1)
             {
+               
                 Console.Write("+");
-                string current = string.Concat(Enumerable.Repeat("-", (map[0, 0] / 3)));
+                string current = string.Concat(Enumerable.Repeat("-", map.GetLength(1)));
                 Console.Write(current);
                 Console.Write("+");
                 for (int i = 0; i < map.GetLength(0); i++)
@@ -90,7 +93,7 @@ namespace TextBasedRPG_MasonSeale
             if (x == 2)
             {
                 Console.Write("+");
-                string current = string.Concat(Enumerable.Repeat("-", (map[0, 0] /3 *2)));
+                string current = string.Concat(Enumerable.Repeat("-", map.GetLength(1) * 2));
                 Console.Write(current);
                 Console.Write("+");
                 for (int i = 0; i < map.GetLength(0); i++)
@@ -168,7 +171,7 @@ namespace TextBasedRPG_MasonSeale
             if (x == 3)
             {
                 Console.Write("+");
-                string current = string.Concat(Enumerable.Repeat("-", (map[0, 0] -1)));
+                string current = string.Concat(Enumerable.Repeat("-", map.GetLength(1) * 3));
                 Console.Write(current);
                 Console.Write("+"); 
                 for (int i = 0; i < map.GetLength(0); i++)
@@ -290,6 +293,7 @@ namespace TextBasedRPG_MasonSeale
   
         static void legend()
         {
+
             Console.WriteLine("┌────────────┐");
             Console.WriteLine("│Legend:     │");
             Console.Write("│");
