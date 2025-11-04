@@ -26,11 +26,16 @@ namespace TextBasedRPG_MasonSeale
 
         static void Main(string[] args)
         {
+            Console.WriteLine();
             legend();
             display();
             Console.ReadKey(true);
+            Console.Clear();
+            legend();
             display(2);
             Console.ReadKey(true);
+            Console.Clear();
+            legend();
             display(3);
             Console.ReadKey(true);
         }
@@ -40,84 +45,244 @@ namespace TextBasedRPG_MasonSeale
         {
             if (x == 1)
             {
-                Console.Write("+-------------------------------+");
+                Console.Write("+");
+                string current = string.Concat(Enumerable.Repeat("-", (map[0, 0] / 3)));
+                Console.Write(current);
+                Console.Write("+");
                 for (int i = 0; i < map.GetLength(0); i++)
                 {
                     Console.WriteLine();
                     Console.Write("|");
                     for (int j = 0; j < map.GetLength(1); j++)
                     {
-                        Console.Write(map[i, j]);
+                        if (map[i,j] == '~')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i,j] == '^')
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i,j] == '`')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i,j] == '*')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write(map[i, j]);
+                        }
+                        
+                        
                     }
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.Write("|");
 
                 }
                 Console.WriteLine();
-                Console.WriteLine("+-------------------------------+");
+                Console.Write("+");
+                Console.Write(current);
+                Console.Write("+");
             }
             if (x == 2)
             {
-                Console.Write("+--------------------------------------------------------------+");
+                Console.Write("+");
+                string current = string.Concat(Enumerable.Repeat("-", (map[0, 0] /3 *2)));
+                Console.Write(current);
+                Console.Write("+");
                 for (int i = 0; i < map.GetLength(0); i++)
                 {
                     Console.WriteLine();
                     Console.Write("|");
                     for (int j = 0; j < map.GetLength(1); j++)
                     {
-                        Console.Write(map[i, j]);
-                        Console.Write(map[i, j]);
+                        if (map[i, j] == '~')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '^')
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '`')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '*')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
                     }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.Write("|");
                     Console.WriteLine();
                     Console.Write("|");
 
                     for (int j = 0; j < map.GetLength(1); j++)
                     {
-                        Console.Write(map[i, j]);
-                        Console.Write(map[i, j]);
+                        if (map[i, j] == '~')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '^')
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '`')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '*')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
                     }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.Write("|");
 
                 }
                 Console.WriteLine();
-                Console.WriteLine("+--------------------------------------------------------------+");
+                Console.Write("+");
+                Console.Write(current);
+                Console.Write("+");
             }
             if (x == 3)
             {
-                Console.Write("+---------------------------------------------------------------------------------------------+");
+                Console.Write("+");
+                string current = string.Concat(Enumerable.Repeat("-", (map[0, 0] -1)));
+                Console.Write(current);
+                Console.Write("+"); 
                 for (int i = 0; i < map.GetLength(0); i++)
                 {
                     Console.WriteLine();
                     Console.Write("|");
                     for (int j = 0; j < map.GetLength(1); j++)
                     {
-                        Console.Write(map[i, j]);
-                        Console.Write(map[i, j]);
-                        Console.Write(map[i, j]);
+                        if (map[i, j] == '~')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '^')
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '`')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '*')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
                     }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.Write("|");
                     Console.WriteLine();
                     Console.Write("|");
                     for (int j = 0; j < map.GetLength(1); j++)
                     {
-                        Console.Write(map[i, j]);
-                        Console.Write(map[i, j]);
-                        Console.Write(map[i, j]);
+                        if (map[i, j] == '~')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '^')
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '`')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '*')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
                     }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.Write("|");
                     Console.WriteLine();
                     Console.Write("|");
                     for (int j = 0; j < map.GetLength(1); j++)
                     {
-                        Console.Write(map[i, j]);
-                        Console.Write(map[i, j]);
-                        Console.Write(map[i, j]);
+                        if (map[i, j] == '~')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '^')
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '`')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
+                        if (map[i, j] == '*')
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                            Console.Write(map[i, j]);
+                        }
                     }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.Write("|");
                 }
                 Console.WriteLine();
-                Console.Write("+---------------------------------------------------------------------------------------------+");
+                Console.Write("+");
+                Console.Write(current);
+                Console.Write("+");
 
             }
 
@@ -125,11 +290,34 @@ namespace TextBasedRPG_MasonSeale
   
         static void legend()
         {
-            Console.WriteLine("Legend:");
-            Console.WriteLine("' = grass");
-            Console.WriteLine("~ = water");
-            Console.WriteLine("^ = mountain");
-            Console.WriteLine("* = forest");
+            Console.WriteLine("┌────────────┐");
+            Console.WriteLine("│Legend:     │");
+            Console.Write("│");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("' = grass   ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("│");
+            Console.WriteLine();
+            Console.Write("│");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("~ = water   ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("│");
+            Console.WriteLine();
+            Console.Write("│");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("^ = mountain");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("│");
+            Console.WriteLine();
+            Console.Write("│");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("* = forest  ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("│");
+            Console.WriteLine();
+            Console.Write("└────────────┘");
+            Console.WriteLine();
         }
     }
 
